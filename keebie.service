@@ -1,0 +1,11 @@
+[Unit]
+Description=Keebie macro keypad daemon
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/Keebie-rs/target/release/keebie --config-dir %h/Keebie
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target
